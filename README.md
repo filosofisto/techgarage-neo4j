@@ -1,1 +1,11 @@
 # techgarage-neo4j
+
+## Run Neo4J server in docker container
+
+	docker run --name testneo4j -p7474:7474 -p7687:7687 -d -v $HOME/neo4j/data:/data -v $HOME/neo4j/logs:/logs -v $HOME/neo4j/import:/var/lib/neo4j/import -v $HOME/neo4j/plugins:/plugins --env NEO4J_AUTH=neo4j/password neo4j:latest
+
+## Access Web Client Tool
+
+	http://localhost:7474/
+
+	
